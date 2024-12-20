@@ -15,8 +15,8 @@ header {
     display: flex;
     height: 120px;
     width: screen;
-    padding: 20px;
-    gap: 1100px;
+    padding: 20px 60px;
+    gap: 1040px;
     background-color: rgb(163, 22, 22);
     border-radius: 0px 0px 20px 20px;
 }
