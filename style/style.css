@@ -50,6 +50,10 @@ nav {
     border-radius: 20px;
 }
 
+nav a {
+    text-decoration: none;
+}
+
 .nav_item {
     display: flex;
     align-items: center;
@@ -82,6 +86,38 @@ h2 {
     border-radius: 20px;
 }
 
-#aaa {
-    height: 10000px;
+
+/* SECTION POLTRONAS */
+#Poltronas {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+    gap: 20px;
+    padding: 60px;
+    backdrop-filter: blur(30px);
+    border: 6px solid white;
+    border-radius: 20px;
+}
+
+#poltronas_container {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    max-width: 260px;
+    gap: 6px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    justify-content: center;
+}
+
+.poltronas {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(150, 150, 150);
+    border-radius: 4px;
 }

@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style.css">
+        <link rel="icon" href="images/Logo.png">
         <script src="script/script.js" defer></script>
         <title>Reservas Cinema</title>
     </head>
@@ -17,29 +18,88 @@
             </div>
             
             <nav>
-                <div class="nav_item">
-                    <h2>Reservar</h2>
-                    <img src="images/arrow.png" alt="Arrow" class="arrow">
-                </div>
+                <a href="#Reservar">
+                    <div class="nav_item">
+                        <h2>Reservar</h2>
+                        <img src="images/arrow.png" alt="Arrow" class="arrow">
+                    </div>
+                </a>
 
-                <div class="nav_item">
-                    <h2>Poltronas</h2>
-                    <img src="images/arrow.png" alt="Arrow" class="arrow">
-                </div>
+                <a href="#a">
+                    <div class="nav_item">
+                        <h2>Poltronas</h2>
+                        <img src="images/arrow.png" alt="Arrow" class="arrow">
+                    </div>
+                </a>
                 
-                <div class="nav_item">
-                    <h2>Filmes</h2>
-                    <img src="images/arrow.png" alt="Arrow" class="arrow">
-                </div>
-
+                <a href="#">
+                    <div class="nav_item">
+                        <h2>Filmes</h2>
+                        <img src="images/arrow.png" alt="Arrow" class="arrow">
+                    </div>
+                </a>
             </nav>
         </header>
 
         <section id="Reservar">
             <h2>Reservar Poltronas</h2>
-            <input type="text">
+            Nome<input type="text" id="ReservaNome">
+            Fileira<input type="text" id="ReservaFileira">
+            Coluna<input type="number" id="ReservaColuna">
+            <button>Reservar</button>
         </section>
 
-        <div id="aaa"></div>
+        <section id="Poltronas">
+            <h2>Poltronas - Status</h2>
+            <div id="poltronas_container">
+                <div class="poltronas" id="polA1"></div>
+                <div class="poltronas" id="polA2"></div>
+                <div class="poltronas" id="polA3"></div>
+                <div class="poltronas" id="polA4"></div>
+                <div class="poltronas" id="polA5"></div>
+
+                <div class="poltronas" id="polB1"></div>
+                <div class="poltronas" id="polB2"></div>
+                <div class="poltronas" id="polB3"></div>
+                <div class="poltronas" id="polB4"></div>
+                <div class="poltronas" id="polB5"></div>
+
+                <div class="poltronas" id="polC1"></div>
+                <div class="poltronas" id="polC2"></div>
+                <div class="poltronas" id="polC3"></div>
+                <div class="poltronas" id="polC4"></div>
+                <div class="poltronas" id="polC5"></div>
+
+                <div class="poltronas" id="polD1"></div>
+                <div class="poltronas" id="polD2"></div>
+                <div class="poltronas" id="polD3"></div>
+                <div class="poltronas" id="polD4"></div>
+                <div class="poltronas" id="polD5"></div>
+
+                <div class="poltronas" id="polE1"></div>
+                <div class="poltronas" id="polE2"></div>
+                <div class="poltronas" id="polE3"></div>
+                <div class="poltronas" id="polE4"></div>
+                <div class="poltronas" id="polE5"></div>
+
+                <div class="poltronas" id="polF1"></div>
+                <div class="poltronas" id="polF2"></div>
+                <div class="poltronas" id="polF3"></div>
+                <div class="poltronas" id="polF4"></div>
+                <div class="poltronas" id="polF5"></div>
+
+                <div class="poltronas" id="polG1"></div>
+                <div class="poltronas" id="polG2"></div>
+                <div class="poltronas" id="polG3"></div>
+                <div class="poltronas" id="polG4"></div>
+                <div class="poltronas" id="polG5"></div>
+
+                <div class="poltronas" id="polH1"></div>
+                <div class="poltronas" id="polH2"></div>
+                <div class="poltronas" id="polH3"></div>
+                <div class="poltronas" id="polH4"></div>
+                <div class="poltronas" id="polH5"></div>
+            </div>
+        </section>
     </body>
 </html>
