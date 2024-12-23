@@ -54,6 +54,15 @@ nav a {
     text-decoration: none;
 }
 
+nav h2 {
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav h2:hover {
+    font-size: 33px;
+}
+
 .nav_item {
     display: flex;
     align-items: center;
