@@ -16,9 +16,11 @@ header {
     height: 120px;
     width: screen;
     padding: 20px 60px;
-    gap: 1040px;
+    gap: 800px;
     background-color: rgb(163, 22, 22);
     border-radius: 0px 0px 20px 20px;
+    position: sticky;
+    top: 0;
 }
 
 #logo {
@@ -26,6 +28,18 @@ header {
     width: 114px;
     border: solid 3px white;
     border-radius: 100%;
+}
+
+#Marca {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#Marca h2 {
+    font-family: 'Nunito';
+    font-size: 40px;
+    color: white;
 }
 
 nav {
@@ -50,4 +64,24 @@ h2 {
 .arrow {
     height: 50px;
     width: 50px;
+}
+
+/* SECTION RESERVA */
+#Reservar {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+    gap: 20px;
+    padding: 60px;
+    backdrop-filter: blur(30px);
+    border: 6px solid white;
+    border-radius: 20px;
+}
+
+#aaa {
+    height: 10000px;
 }
