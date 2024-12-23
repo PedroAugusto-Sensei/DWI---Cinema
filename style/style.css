@@ -12,6 +12,8 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     height: 120px;
     width: screen;
@@ -19,8 +21,6 @@ header {
     gap: 800px;
     background-color: rgb(163, 22, 22);
     border-radius: 0px 0px 20px 20px;
-    position: sticky;
-    top: 0;
 }
 
 #logo {
