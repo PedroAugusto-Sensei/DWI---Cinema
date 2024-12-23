@@ -4,8 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="w3.css">
+
         <link rel="stylesheet" href="style/style.css">
+
         <link rel="icon" href="images/Logo.png">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
         <script src="script/script.js" defer></script>
         <title>Reservas Cinema</title>
     </head>
@@ -43,9 +49,22 @@
 
         <section id="Reservar">
             <h2>Reservar Poltronas</h2>
-            Nome<input type="text" id="ReservaNome">
-            Fileira<input type="text" id="ReservaFileira">
-            Coluna<input type="number" id="ReservaColuna">
+
+            <div class="labelinputs">
+                <label for="ReservaNome">Nome:</label>
+                <input type="text" id="ReservaNome">
+            </div>
+
+            <div class="labelinputs">
+                <label for="ReservaFileira">Fileira:</label>
+                <input type="text" id="ReservaFileira">
+            </div>
+
+            <div class="labelinputs">
+                <label for="ReservaColuna">Coluna:</label>
+                <input type="number" id="ReservaColuna">
+            </div>
+
             <button id="btnReservar">Reservar</button>
         </section>
 
