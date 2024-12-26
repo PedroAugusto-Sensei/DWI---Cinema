@@ -163,7 +163,7 @@ input {
 
 #poltronas_container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     height: fit-content;
     max-width: 310px;
     gap: 6px;
@@ -178,7 +178,11 @@ input {
     width: 40px;
     background-color: rgb(150, 150, 150);
     border-radius: 4px;
+    text-align: center;
+    font-family: 'Nunito';
+    color: white;
 }
+
 
 /* SECTION FILMES */
 #Filmes {
