@@ -1,41 +1,61 @@
-let inputNome = document.getElementById("");
-let inputFila = document.getElementById("");
-let inputColuna = document.getElementById("");
+const inputNome = document.getElementById("ReservaNome");
+const inputFila = document.getElementById("ReservaFileira");
+const inputColuna = document.getElementById("ReservaColuna");
+let btnReservar = document.getElementById("btnReservar");
+const letras = "abcdefgh"
+let cont = 0
 
-const situacao = {
-    "a1": false, "a2": false, "a3": false, "a4": false, "a5": false, "a6": false, "b1": false, "b2": false, "b3": false,
-    "b4": false, "b5": false, "b6": false, "c1": false, "c2": false, "c3": false, "c4": false, "c5": false, "c6": false,
-    "d1": false, "d2": false, "d3": false, "d4": false, "d5": false, "d6": false, "e1": false, "e2": false, "e3": false,
-    "e4": false, "e5": false, "e6": false, "f1": false, "f2": false, "f3": false, "f4": false, "f5": false, "f6": false,
-    "f6": false, "g1": false, "g2": false, "g3": false, "g4": false, "g5": false, "g6": false, "h1": false, "h2": false,
-    "h3": false, "h4": false, "h5": false, "h6": false
+function inicializador() {
+    for (let i = 0; i < 8; i++) {
+        for (let h = 1; h <= 6; h++)
+            localStorage.setItem(letras[i] + [h], false)
+            console.log("a")
+    }
 }
 
 function pegarPoltronas() {
     const vars = ["polA1", "polA2", "polA3", "polA4", "polA5", "polA6", "polB1", "polB2", "polB3", "polB4", "polB5", "polB6",
-        "polC1", "polC2", "polC3", "polC4", "polC5", "polC6", "polD1", "polD2", "polD3", "polD4", "polD5","polD6", "polE1",
+        "polC1", "polC2", "polC3", "polC4", "polC5", "polC6", "polD1", "polD2", "polD3", "polD4", "polD5", "polD6", "polE1",
         "polE2", "polE3", "polE4", "polE5", "polE6", "polF1", "polF2", "polF3", "polF4", "polF5", "polF6", "polG1", "polG2",
         "polG3", "polG4", "polG5", "polG6", "polH1", "polH2", "polH3", "polH4", "polH5", "polH6"
     ]
     const elementos = [];
+    const reservando = [];
 
     for (let i = 0; i < vars.length; i++) {
         const element = document.getElementById(vars[i])
         elementos.push(element);
     }
-    // console.log(elementos);
-    for (let i = 0; i < elementos.length; i++) {
-        if (Object.values(situacao)[i] === false) {
-            elementos[i].style.backgroundColor = "red";
-        }
-        else if (Object.values(situacao)[i] === true) {
-            elementos[i].style.backgroundColor = "green";
-        }
-        else {
-            elementos[i].style.backgroundColor = "rgb(224, 221, 0)";
+
+    for (let i = 0; i < 8; i++) {
+        for (let h = 1; h <= 6; h++) {
+            if (JSON.parse(localStorage.getItem(letras[i] + [h])) === false) {
+                elementos[cont].style.backgroundColor = "green";
+            }
+            else if (JSON.parse(localStorage.getItem(letras[i] + [h])) === true) {
+                elementos[cont].style.backgroundColor = "red";
+
+            }
+            else if (JSON.parse(localStorage.getItem(letras[i] + [h])) === null) {
+                elementos[cont].style.backgroundColor = "rgb(224, 221, 0)";
+                reservando.push(letras[i] + [h]);
+            }
+            cont += 1
         }
     }
 
 }
 
+
+function Reservar() {
+    console.log(inputFila.value + inputColuna.value);
+    console.log(JSON.parse(localStorage.getItem(inputFila.value + inputColuna.value)));
+}
+
+function Adicionar() {
+    btnReservar.style.display = "block";
+    elementos[4].style.backgroundColor = "rgb(224, 221, 0)";
+    // localStorage.setItem(inputFila.value + inputColuna.value, null);
+    
+}
 pegarPoltronas();

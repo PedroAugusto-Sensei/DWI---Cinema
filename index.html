@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="w3.css">
+        <!-- <link rel="stylesheet" href="w3.css"> -->
 
         <link rel="stylesheet" href="style/style.css">
 
@@ -52,20 +52,21 @@
 
             <div class="labelinputs">
                 <label for="ReservaNome">Nome:</label>
-                <input type="text" id="ReservaNome">
+                <input type="text" name="ReservaNome" id="ReservaNome">
             </div>
 
             <div class="labelinputs">
                 <label for="ReservaFileira">Fileira:</label>
-                <input type="text" id="ReservaFileira">
+                <input type="text" name="ReservaFileira" id="ReservaFileira">
             </div>
 
             <div class="labelinputs">
                 <label for="ReservaColuna">Coluna:</label>
-                <input type="number" id="ReservaColuna">
+                <input type="number" name="ReservaColuna" id="ReservaColuna">
             </div>
 
-            <button id="btnReservar">Reservar</button>
+            <button id="btnAdicionar" class="botao" onclick="Adicionar()">Adicionar</button>
+            <button id="btnReservar" class="botao" onclick="Reservar()">Reservar</button>
         </section>
 
         <section id="Poltronas">

@@ -124,8 +124,7 @@ input {
     gap: 10px;
 }
 
-#btnReservar {
-    background-color: rgb(163, 22, 22);
+.botao {
     color: white;
     font-size: 20px;
     border: none;
@@ -133,9 +132,18 @@ input {
     cursor: pointer;
 }
 
-#btnReservar:hover {
+.botao:hover {
     transform: scale(1.12);
     transition: 0.5s;
+}
+
+#btnReservar {
+    display: none;
+    background-color: rgb(163, 22, 22);
+}
+
+#btnAdicionar {
+    background-color: #253659;
 }
 
 /* SECTION POLTRONAS */
