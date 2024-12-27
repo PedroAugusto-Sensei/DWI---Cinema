@@ -58,7 +58,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 function Adicionar() {
-    let poltronaEscolhida = inputFila.value + inputColuna.value;
+    let poltronaEscolhida = inputFila.value.toLowerCase() + inputColuna.value;
     let conti = 0
     if (poltronaEscolhida === "" || inputFila.value.length > 1 || inputColuna.value === "") {
         alert("Escolha uma poltrona válida")
