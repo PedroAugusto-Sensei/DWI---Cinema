@@ -1,9 +1,9 @@
-const inputNome = document.getElementById("ReservaNome");
 const inputFila = document.getElementById("ReservaFileira");
 const inputColuna = document.getElementById("ReservaColuna");
 let btnReservar = document.getElementById("btnReservar");
-const letras = "abcdefgh"
-let cont = 0
+let alerta = document.getElementById("alerta");
+const letras = "abcdefgh";
+let cont = 0;
 
 function inicializador() {
     for (let i = 0; i < 8; i++) {
@@ -29,16 +29,11 @@ for (let i = 0; i < vars.length; i++) {
 function pegarPoltronas() {
     for (let i = 0; i < 8; i++) {
         for (let h = 1; h <= 6; h++) {
-
             if (JSON.parse(localStorage.getItem(letras[i] + [h])) === false) {
                 elementos[cont].style.backgroundColor = "green";
             }
-            else if (JSON.parse(localStorage.getItem(letras[i] + [h])) === true) {
+            else {
                 elementos[cont].style.backgroundColor = "red";
-
-            }
-            else if (JSON.parse(localStorage.getItem(letras[i] + [h])) === null) {
-                elementos[cont].style.backgroundColor = "rgb(224, 221, 0)";
             }
             cont += 1
         }
@@ -46,17 +41,36 @@ function pegarPoltronas() {
 }
 
 function Reservar() {
-    localStorage.setItem(inputFila.value + inputColuna.value, true);
+    for (let poltrona in reservando) {
+        localStorage.setItem(reservando[poltrona], true);
+    }
     location.reload();
 }
 
+document.addEventListener('keydown', function (event) {
+    if (event.key === "Enter") {
+        Adicionar();
+    };
+});
+
 function Adicionar() {
-    btnReservar.style.display = "block";
+    let poltronaEscolhida = inputFila.value + inputColuna.value;
     let conti = 0
-    reservando.push(inputFila.value + inputColuna.value)
+    if (poltronaEscolhida === "" || inputFila.value.length > 1 || inputColuna.value === "") {
+        alert("Escolha uma poltrona válida")
+        return
+    }
+
+    else if (JSON.parse(localStorage.getItem(poltronaEscolhida)) === true) {
+        alert("POLTRONA OCUPADA, escolha outra")
+        return
+    }
+
+    btnReservar.style.display = "block";
+    reservando.push(poltronaEscolhida);
     for (let i = 0; i < 8; i++) {
         for (let h = 1; h <= 6; h++) {
-            if (letras[i] + [h] === inputFila.value + inputColuna.value) {
+            if (letras[i] + [h] === poltronaEscolhida) {
                 elementos[conti].style.backgroundColor = "rgb(224, 221, 0)";
             }
             conti += 1;
