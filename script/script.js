@@ -65,7 +65,6 @@ function Adicionar() {
         alert("POLTRONA OCUPADA, escolha outra")
         return
     }
-
     btnReservar.style.display = "block";
     reservando.push(poltronaEscolhida);
     for (let i = 0; i < 8; i++) {
